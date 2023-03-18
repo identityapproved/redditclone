@@ -13,8 +13,8 @@ const SearchInput: React.FC<SearchInputProps> = () => {
 			<InputGroup>
 				<InputLeftElement
 					pointerEvents='none'
-					children={<SearchIcon color='gray.400' mb={1} />}
-				/>
+					
+				>{<SearchIcon color='gray.400' mb={1} />}</InputLeftElement>
 				<Input
 					placeholder='Search Reddit'
 					fontSize="10px"
