@@ -4741,6 +4741,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-firebase-hooks@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "react-firebase-hooks@npm:5.1.1"
+  peerDependencies:
+    firebase: ">= 9.0.0"
+    react: ">= 16.8.0"
+  checksum: f7dbc42202082e35a4bbd60e6b729cf7a1a14ca300850f35dbcbda3fe3ecef0c1f8157c5dec711edfd3d6e021f2626e768241296598896731a56ce768bab829b
+  languageName: node
+  linkType: hard
+
 "react-focus-lock@npm:^2.9.2":
   version: 2.9.4
   resolution: "react-focus-lock@npm:2.9.4"
@@ -4865,6 +4875,7 @@ __metadata:
     next: 13.2.4
     react: 18.2.0
     react-dom: 18.2.0
+    react-firebase-hooks: ^5.1.1
     recoil: ^0.7.7
     typescript: 4.9.5
   languageName: unknown

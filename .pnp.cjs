@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:13.2.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:18.2.0"],\
+            ["react-firebase-hooks", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:5.1.1"],\
             ["recoil", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:0.7.7"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
@@ -7046,6 +7047,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-firebase-hooks", [\
+        ["npm:5.1.1", {\
+          "packageLocation": "./.yarn/cache/react-firebase-hooks-npm-5.1.1-a1335e328c-f7dbc42202.zip/node_modules/react-firebase-hooks/",\
+          "packageDependencies": [\
+            ["react-firebase-hooks", "npm:5.1.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:5.1.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-firebase-hooks-virtual-afccae411a/0/cache/react-firebase-hooks-npm-5.1.1-a1335e328c-f7dbc42202.zip/node_modules/react-firebase-hooks/",\
+          "packageDependencies": [\
+            ["react-firebase-hooks", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:5.1.1"],\
+            ["@types/firebase", null],\
+            ["@types/react", "npm:18.0.28"],\
+            ["firebase", "npm:9.17.2"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/firebase",\
+            "@types/react",\
+            "firebase",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-focus-lock", [\
         ["npm:2.9.4", {\
           "packageLocation": "./.yarn/cache/react-focus-lock-npm-2.9.4-395896aa07-f4c696bdbd.zip/node_modules/react-focus-lock/",\
@@ -7211,6 +7238,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:13.2.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:18.2.0"],\
+            ["react-firebase-hooks", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:5.1.1"],\
             ["recoil", "virtual:9d5fd67ad1f1706ccf5341e84c3c1b7111e6ac9dfe7739c14dc8992881ce3d0ecfc0304064c26809150ab04d7ccf3a163251ba40e1b42abde5bfe8284d5cfd5b#npm:0.7.7"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
