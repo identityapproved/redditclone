@@ -7,7 +7,7 @@ import SearchInput from './SearchInput';
 
 const Navbar: React.FC = () => {
 	const [user, loading, error] = useAuthState(auth);
-
+	
 	return (
 		<Flex bg="white" height="44px" padding="6px 12px">
 			<Flex align={'center'}>
