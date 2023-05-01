@@ -1,12 +1,14 @@
 import { authModalState } from '@/atoms/authModalAtoms';
 import { Input, Button, Flex, Text } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from '@/firebase/clientApp';
+import { auth, firestore } from '@/firebase/clientApp';
 import { FIREBASE_ERRORS } from '@/firebase/errors';
+import { User } from 'firebase/auth';
+import { addDoc, collection } from 'firebase/firestore';
 
-const Signup:React.FC = () => {
+const Signup: React.FC = () => {
 	const setAuthModalState = useSetRecoilState(authModalState);
 	const [signUpForm, setSignUpForm] = useState({
 		email: '',
@@ -16,11 +18,19 @@ const Signup:React.FC = () => {
 	const [error, setError] = useState('');
 
 	const [
-	createUserWithEmailAndPassword,
-	user,
-	loading,
-	userError,
+		createUserWithEmailAndPassword,
+		userCred,
+		loading,
+		userError,
 	] = useCreateUserWithEmailAndPassword(auth);
+
+	const createUserDoc = async (user: User) => {
+		await addDoc(collection(firestore, 'users'), JSON.parse(JSON.stringify(user)));
+	};
+
+	useEffect(() => {
+		if (userCred) createUserDoc(userCred.user);
+	}, [userCred]);
 
 	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		setSignUpForm((prev) => ({
@@ -38,7 +48,7 @@ const Signup:React.FC = () => {
 		}
 
 		createUserWithEmailAndPassword(signUpForm.email, signUpForm.password);
-	 };
+	};
 
 
 	return (
@@ -105,22 +115,22 @@ const Signup:React.FC = () => {
 			/>
 
 			{error || userError && (
-				<Text textAlign="center" color="red" fontSize="10pt">{error || FIREBASE_ERRORS[userError.message as keyof typeof FIREBASE_ERRORS] }</Text>
+				<Text textAlign="center" color="red" fontSize="10pt">{error || FIREBASE_ERRORS[userError.message as keyof typeof FIREBASE_ERRORS]}</Text>
 			)}
 			<Button type="submit" width="100%" height="36px" mt={2} mb={2} isLoading={loading}>
-				Sign Up	
+				Sign Up
 			</Button>
 			<Flex justifyContent="center">
 				<Text mr={1} >Already a redditor?</Text>
-				<Text color="blue.500" fontWeight={700} cursor='pointer' onClick={() => 
+				<Text color="blue.500" fontWeight={700} cursor='pointer' onClick={() =>
 					setAuthModalState((prev) => ({
 						...prev,
 						view: "login",
-				}))}>
+					}))}>
 					LOG IN
 				</Text>
 			</Flex>
 		</form>
 	);
-}
+};
 export default Signup;
